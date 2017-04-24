@@ -6,6 +6,7 @@
           <%= f.text_area :content, class: 'form-control', rows: 5 %>
         </div>
         <%= f.submit 'Post', class: 'btn btn-primary btn-block' %> <br>
+        <class="<%= 'active' if current_page?(favoritings_user_path(@user)) %>"><%= link_to favoritings_user_path(@user) do %>お気に入りページへ <span class="badge"><%= @count_favoritings %></span><% end %>
       <% end %>
     </aside>
     <div class="col-xs-8">

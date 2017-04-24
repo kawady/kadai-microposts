@@ -13,11 +13,8 @@
           <p><%= micropost.content %></p>
         </div>
         <div>
-          <% if current_user == micropost.user %>
-            <%= link_to "削除する", micropost, method: :delete, data: { confirm: "本当に削除しますか？" }, class: 'btn btn-danger btn-xs' %>
-          <% else %>  
             <%= render 'favorites/fav_button', micropost: micropost, user: @user %>
-          <% end %>
+  
         </div>
       </div>
     </li>
